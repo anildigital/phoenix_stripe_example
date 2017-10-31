@@ -20,7 +20,7 @@ defmodule PhoenixStripeExample.Mixfile do
   def application do
     [
       mod: {PhoenixStripeExample.Application, []},
-      extra_applications: [:logger, :runtime_tools, :coherence]
+      extra_applications: [:logger, :runtime_tools, :coherence, :stripe]
     ]
   end
 
@@ -41,7 +41,8 @@ defmodule PhoenixStripeExample.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:coherence, "~> 0.5.0"}
+      {:coherence, "~> 0.5.0"},
+      {:stripe, "~> 0.7.1", hex: :stripe_elixir}
     ]
   end
 
