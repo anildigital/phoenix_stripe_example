@@ -1,0 +1,7 @@
+defmodule PhoenixStripeExampleWeb.PageController do
+  use PhoenixStripeExampleWeb, :controller
+
+  def index(conn, _params) do
+    render conn, "index.html"
+  end
+end
