@@ -4,10 +4,7 @@
 
   <li>
     <strong>Charge:</strong>
-    <%= @charge.charge %>
+    <%= @charge %>
   </li>
 
 </ul>
-
-<span><%= link "Edit", to: charge_path(@conn, :edit, @charge) %></span>
-<span><%= link "Back", to: charge_path(@conn, :index) %></span>

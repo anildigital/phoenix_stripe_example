@@ -44,10 +44,9 @@ defmodule PhoenixStripeExampleWeb.Router do
 
   scope "/", PhoenixStripeExampleWeb do
     pipe_through(:protected)
+    resources("/charges", ChargeController)
     # Add protected routes below
   end
-
-  resources("/charges", ChargeController)
 
   # Other scopes may use custom stacks.
   # scope "/api", PhoenixStripeExampleWeb do

@@ -40,14 +40,18 @@ config(
 # different ports.
 
 # Watch static and templates for browser reloading.
-config(:phoenix_stripe_example, PhoenixStripeExampleWeb.Endpoint, live_reload: [
-  patterns: [
-    ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
-    ~r{priv/gettext/.*(po)$},
-    ~r{lib/phoenix_stripe_example_web/views/.*(ex)$},
-    ~r{lib/phoenix_stripe_example_web/templates/.*(eex)$}
+config(
+  :phoenix_stripe_example,
+  PhoenixStripeExampleWeb.Endpoint,
+  live_reload: [
+    patterns: [
+      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
+      ~r{priv/gettext/.*(po)$},
+      ~r{lib/phoenix_stripe_example_web/views/.*(ex)$},
+      ~r{lib/phoenix_stripe_example_web/templates/.*(eex)$}
+    ]
   ]
-])
+)
 
 # Do not include metadata nor timestamps in development logs
 config(:logger, :console, format: "[$level] $message\n")
@@ -69,3 +73,4 @@ config(
 )
 
 config(:stripe, :secret_key, "sk_test_GDxIyob2yYrppZ0bN8W1kHzY")
+config(:stripe, :publishable_key, "pk_test_iRcTotsaBsT8DUWwP87h1u4S")
