@@ -1,0 +1,26 @@
+<h2>Listing Charges</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Charge</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for charge <- @charges do %>
+    <tr>
+      <td><%= charge.charge %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: charge_path(@conn, :show, charge), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: charge_path(@conn, :edit, charge), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: charge_path(@conn, :delete, charge), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Charge", to: charge_path(@conn, :new) %></span>
